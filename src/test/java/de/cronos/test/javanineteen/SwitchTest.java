@@ -62,6 +62,7 @@ class SwitchTest {
                 yield "in progress";
             }
             case FINISHED -> "finished";
+            // default branch can be removed (and IntelliJ IDEA shows an according warning)
             default -> throw new IllegalArgumentException("Unknown status " + status);
         };
 
